@@ -8,7 +8,7 @@ plugins {
 }
 
 group = "br.com.emersonmendes"
-version = "1.2-SNAPSHOT"
+version = "1.3-SNAPSHOT"
 
 repositories {
   mavenCentral()
