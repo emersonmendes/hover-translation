@@ -1,5 +1,7 @@
-package br.com.emersonmendes.hovertranslation
+package br.com.emersonmendes.hovertranslation.actions
 
+import br.com.emersonmendes.hovertranslation.services.TranslationService
+import br.com.emersonmendes.hovertranslation.splitToWords
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.actionSystem.CommonDataKeys
@@ -24,10 +26,11 @@ class AddTranslationAction : AnAction() {
             return
         }
 
+        val service = project.getService(TranslationService::class.java)
+
         keys.forEach { key ->
             val value = Messages.showInputDialog(e.project, "Enter a value for: $key", "Add Value", null)
             if(!value.isNullOrEmpty()){
-                val service = project.getService(TranslationService::class.java)
                 service.addKeyValue(key, value)
             }
         }

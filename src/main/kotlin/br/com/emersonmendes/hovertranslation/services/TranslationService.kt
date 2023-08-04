@@ -1,4 +1,4 @@
-package br.com.emersonmendes.hovertranslation
+package br.com.emersonmendes.hovertranslation.services
 
 import com.intellij.openapi.components.PersistentStateComponent
 import com.intellij.openapi.components.Service
@@ -6,7 +6,7 @@ import com.intellij.openapi.components.State
 import com.intellij.openapi.components.Storage
 
 @Service
-@State(name = "TranslationService", storages = [Storage("br.com.emersonmendes.hovertranslation.xml")])
+@State(name = "TranslationService", storages = [Storage("hover-translation.xml")])
 class TranslationService : PersistentStateComponent<TranslationState> {
     private var state = TranslationState()
 
@@ -26,3 +26,5 @@ class TranslationService : PersistentStateComponent<TranslationState> {
         this.state = state
     }
 }
+
+data class TranslationState(var map: MutableMap<String, String> = mutableMapOf())

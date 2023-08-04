@@ -18,13 +18,30 @@
   </extensions>
   <actions>
 
-    <action
-       id="br.com.emersonmendes.hovertranslation.AddTranslationAction"
-       class="br.com.emersonmendes.hovertranslation.AddTranslationAction"
-       text="Add Translation"
-       description="Add Translation"
-    >
+    <group id="br.com.emersonmendes.hovertranslation.Translation" text="Translation" popup="true">
+      <action
+        id="br.com.emersonmendes.hovertranslation.actions.AddTranslationAction"
+        class="br.com.emersonmendes.hovertranslation.actions.AddTranslationAction"
+        text="Add Translation"
+        description="Add translation"
+      >
+      </action>
+      <action
+        id="br.com.emersonmendes.hovertranslation.actions.ImportTranslationsAction"
+        class="br.com.emersonmendes.hovertranslation.actions.ImportTranslationsAction"
+        text="Import Translations"
+        description="Import translations"
+      >
+      </action>
+      <action
+        id="br.com.emersonmendes.hovertranslation.actions.ExportTranslationsAction"
+        class="br.com.emersonmendes.hovertranslation.actions.ExportTranslationsAction"
+        text="Export Translations"
+        description="Export translations"
+      >
+      </action>
       <add-to-group group-id="EditorPopupMenu" anchor="last"/>
-    </action>
+    </group>
+
   </actions>
 </idea-plugin>

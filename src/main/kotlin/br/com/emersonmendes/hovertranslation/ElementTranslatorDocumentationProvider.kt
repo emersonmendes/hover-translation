@@ -1,5 +1,6 @@
 package br.com.emersonmendes.hovertranslation
 
+import br.com.emersonmendes.hovertranslation.services.TranslationService
 import com.intellij.lang.documentation.DocumentationProvider
 import com.intellij.psi.PsiElement
 import com.intellij.psi.util.elementType
@@ -15,15 +16,13 @@ class ElementTranslatorDocumentationProvider : DocumentationProvider {
     override fun generateDoc(element: PsiElement, originalElement: PsiElement?): String {
 
         val service = element.project.getService(TranslationService::class.java)
-
         val ( originalName, translatedName ) = element.name().translate(service)
-
         val baseDoc = kotlinDocumentationProvider.generateDoc(element, originalElement)?: ""
 
         return """
             <div class='definition'>
-                <div><b>Original Name</b>: $originalName</div>
-                <div><b>Translated Name</b>: $translatedName</div>
+                <div><b>Original name</b>: $originalName</div>
+                <div><b>Translated name</b>: $translatedName</div>
                 <br />
             </div>
         """.trimIndent() + baseDoc
