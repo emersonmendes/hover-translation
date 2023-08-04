@@ -8,7 +8,7 @@ plugins {
 }
 
 group = "br.com.emersonmendes"
-version = "1.0.2"
+version = "1.0.3"
 
 repositories {
   mavenCentral()
@@ -42,8 +42,8 @@ tasks {
   }
 
   patchPluginXml {
-    sinceBuild.set("232.0000")
-    untilBuild.set("233.*")
+    sinceBuild.set("230.0000")
+    untilBuild.set("233")
   }
 
   signPlugin {
