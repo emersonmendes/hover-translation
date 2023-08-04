@@ -32,21 +32,12 @@ class ElementTranslatorDocumentationProvider : DocumentationProvider {
 }
 
 private fun String.translate(service: TranslationService): Pair<String, String> {
-
-    val name = this
-
-    val splittedName = name
-        .split(" ")
-        .map { it.replace(Regex("[^a-zA-Z0-9:$\\s]"), "") }
-        .flatMap { it.split(Regex("(?<=\\p{Lower})(?=\\p{Upper}|\\W)|(?<=\\W)(?=\\p{Upper}|\\p{Lower})")) }
-        .map { it.lowercase() }
-
-    val original = splittedName.joinToString(" ")
-    val translated = splittedName.joinToString(" ") { service.getValue(it) }
-
+    val splitName = this.splitToWords()
+    val original = splitName.joinToString(" ")
+    val translated = splitName.joinToString(" ") { service.getValue(it) }
     return Pair(original, translated)
-
 }
+
 
 private fun PsiElement.name(): String {
 

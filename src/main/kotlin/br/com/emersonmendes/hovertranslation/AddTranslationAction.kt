@@ -18,12 +18,19 @@ class AddTranslationAction : AnAction() {
 
         val project = e.project ?: return
         val editor = e.getRequiredData(CommonDataKeys.EDITOR)
-        val selectionModel = editor.selectionModel
-        val key = selectionModel.selectedText?.lowercase()
-        val value = Messages.showInputDialog(e.project, "Enter a value for: $key", "Add Value", null)
+        val keys = editor.selectionModel.selectedText?.splitToWords()
 
-        val service = project.getService(TranslationService::class.java)
-        service.addKeyValue(key!!, value!!)
+        if(keys.isNullOrEmpty()){
+            return
+        }
+
+        keys.forEach { key ->
+            val value = Messages.showInputDialog(e.project, "Enter a value for: $key", "Add Value", null)
+            if(!value.isNullOrEmpty()){
+                val service = project.getService(TranslationService::class.java)
+                service.addKeyValue(key, value)
+            }
+        }
 
         Messages.showInfoMessage(project, "Saved successfully!", "Success")
 
