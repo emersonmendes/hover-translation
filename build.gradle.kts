@@ -8,14 +8,12 @@ plugins {
 }
 
 group = "br.com.emersonmendes"
-version = "1.0-SNAPSHOT"
+version = "1.1-SNAPSHOT"
 
 repositories {
   mavenCentral()
 }
 
-// Configure Gradle IntelliJ Plugin
-// Read more: https://plugins.jetbrains.com/docs/intellij/tools-gradle-intellij-plugin.html
 intellij {
   version.set("2023.1.2")
   plugins.set(listOf("org.jetbrains.kotlin"))
@@ -24,12 +22,9 @@ intellij {
 
 dependencies {
   compileOnly ("org.jetbrains.kotlin:kotlin-compiler-embeddable:$kotlinVersion")
-//  compileOnly ("org.jetbrains.kotlin:kotlin-compiler:$kotlinVersion")
-//  compileOnly("org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion")
 }
 
 tasks {
-  // Set the JVM compatibility versions
   withType<JavaCompile> {
     sourceCompatibility = jdkVersion
     targetCompatibility = jdkVersion
