@@ -8,8 +8,6 @@
     This plugin helps you to translate any or almost any elements from the Editor.
   ]]></description>
 
-  <idea-version since-build="231.0000" until-build="233.*"/>
-
   <depends>com.intellij.modules.platform</depends>
   <depends>org.jetbrains.kotlin</depends>
   <extensions defaultExtensionNs="com.intellij">

@@ -40,11 +40,11 @@ tasks {
   compileTestKotlin {
     kotlinOptions.jvmTarget = jdkVersion
   }
-//
-//  patchPluginXml {
-//    sinceBuild.set("231")
-//    untilBuild.set("233.*")
-//  }
+
+  patchPluginXml {
+    sinceBuild.set("231.*")
+    untilBuild.set("233.*")
+  }
 
   signPlugin {
     certificateChain.set(System.getenv("CERTIFICATE_CHAIN"))
