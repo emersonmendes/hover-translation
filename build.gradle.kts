@@ -8,7 +8,7 @@ plugins {
 }
 
 group = "br.com.emersonmendes"
-version = "1.3-SNAPSHOT"
+version = "1.0"
 
 repositories {
   mavenCentral()
@@ -40,11 +40,11 @@ tasks {
   compileTestKotlin {
     kotlinOptions.jvmTarget = jdkVersion
   }
-
-  patchPluginXml {
-    sinceBuild.set("231")
-    untilBuild.set("233.*")
-  }
+//
+//  patchPluginXml {
+//    sinceBuild.set("231")
+//    untilBuild.set("233.*")
+//  }
 
   signPlugin {
     certificateChain.set(System.getenv("CERTIFICATE_CHAIN"))
