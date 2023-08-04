@@ -23,7 +23,9 @@ class AddTranslationAction : AnAction() {
         val value = Messages.showInputDialog(e.project, "Enter a value for: $key", "Add Value", null)
 
         val service = project.getService(TranslationService::class.java)
-        service.addKeyValue(key!!, value?.lowercase()!!)
+        service.addKeyValue(key!!, value!!)
+
+        Messages.showInfoMessage(project, "Saved successfully!", "Success")
 
     }
 

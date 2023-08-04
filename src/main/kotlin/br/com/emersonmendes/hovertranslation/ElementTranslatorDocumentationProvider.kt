@@ -16,16 +16,14 @@ class ElementTranslatorDocumentationProvider : DocumentationProvider {
 
         val service = element.project.getService(TranslationService::class.java)
 
-        val ( originalName, translatedName ) = element
-            .name()
-            .translate(service)
+        val ( originalName, translatedName ) = element.name().translate(service)
 
         val baseDoc = kotlinDocumentationProvider.generateDoc(element, originalElement)?: ""
 
         return """
             <div class='definition'>
                 <div><b>Original Name</b>: $originalName</div>
-                <div><b>English Name</b>: $translatedName</div>
+                <div><b>Translated Name</b>: $translatedName</div>
                 <br />
             </div>
         """.trimIndent() + baseDoc
