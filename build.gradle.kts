@@ -15,7 +15,7 @@ repositories {
 }
 
 intellij {
-  version.set("2023.1.2")
+  version.set("2023.2")
   plugins.set(listOf("org.jetbrains.kotlin"))
 //  plugins.set(listOf("com.intellij.java"))
 }
