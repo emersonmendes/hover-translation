@@ -34,5 +34,10 @@
   </extensions>
   <actions>
 
+    <action id="br.com.emersonmendes.hovertranslation.AddTranslationAction"
+            class="br.com.emersonmendes.hovertranslation.AddTranslationAction" text="Add Translation"
+            description="Add Translation">
+      <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+    </action>
   </actions>
 </idea-plugin>

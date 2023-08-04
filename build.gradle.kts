@@ -23,8 +23,8 @@ intellij {
 }
 
 dependencies {
-  compileOnly("org.jetbrains.kotlin:kotlin-compiler-embeddable:$kotlinVersion")
-//  implementation ("org.jetbrains.kotlin:kotlin-psi:$kotlinVersion")
+  compileOnly ("org.jetbrains.kotlin:kotlin-compiler-embeddable:$kotlinVersion")
+//  compileOnly ("org.jetbrains.kotlin:kotlin-compiler:$kotlinVersion")
 //  compileOnly("org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion")
 }
 
