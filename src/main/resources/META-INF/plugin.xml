@@ -1,13 +1,14 @@
 <idea-plugin>
+
   <id>br.com.emersonmendes.hover-translation</id>
-
   <name>Hover-translation</name>
-
   <vendor email="emerson.emendes@gmail.com" url="https://emersonmendes.com.br">Emerson Mendes</vendor>
 
   <description><![CDATA[
     This plugin helps you to translate any or almost any elements from the Editor.
   ]]></description>
+
+  <idea-version since-build="231.0000" until-build="233.*"/>
 
   <depends>com.intellij.modules.platform</depends>
   <depends>org.jetbrains.kotlin</depends>
