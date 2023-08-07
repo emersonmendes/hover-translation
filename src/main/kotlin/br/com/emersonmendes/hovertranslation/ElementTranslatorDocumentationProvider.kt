@@ -13,7 +13,7 @@ class ElementTranslatorDocumentationProvider : DocumentationProvider {
 
     private val kotlinDocumentationProvider = KotlinDocumentationProvider()
 
-    override fun generateDoc(element: PsiElement, originalElement: PsiElement?): String {
+    override fun generateDoc(element: PsiElement, originalElement: PsiElement?): String? {
 
         val service = element.project.getService(TranslationService::class.java)
         val ( originalName, translatedName ) = element.name().translate(service)

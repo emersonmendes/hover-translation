@@ -1,11 +1,25 @@
 <idea-plugin>
 
   <id>br.com.emersonmendes.hover-translation</id>
-  <name>Hover-translation</name>
-  <vendor email="emerson.emendes@gmail.com" url="https://emersonmendes.com.br">Emerson Mendes</vendor>
+  <name>Hover Translation</name>
+  <vendor email="emerson.emendes@gmail.com" url="https://emersonmendes.com.br">
+    Emerson Mendes
+  </vendor>
 
   <description><![CDATA[
-    This plugin helps you to translate any or almost any elements from the Editor.
+  <h2>Hover Translation Plugin</h2>
+  <p>Experience seamless translations within the Editor with the "Hover Translation" plugin. Currently optimized for Kotlin, stay tuned for future updates supporting more languages!</p>
+
+  <h3>Features:</h3>
+  <ul>
+      <li><b>Translation Preview</b>: Hover over any element in the Editor to instantly see both its "Original name" and "Translated name".</li>
+      <li><b>Addition of Translations</b>: Right-click on a selected element to reveal a context menu. Choose "Translation" > "Add Translation" to introduce your new translation.</li>
+      <li><b>Import Translations</b>: Have a list of translations ready to integrate? Import them effortlessly using a CSV format (without headers). Your file should resemble:
+      <pre>key1,value1</pre>
+      To get started with importing, right-click within the Editor and opt for "Translation" > "Import Translations".
+      </li>
+      <li><b>Export Translations</b>: Share or backup your translations with ease. Right-click and select "Translation" > "Export Translations" to handle them externally.</li>
+  </ul>
   ]]></description>
 
   <depends>com.intellij.modules.platform</depends>
