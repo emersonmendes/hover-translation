@@ -8,11 +8,11 @@
 
   <description><![CDATA[
   <h2>Hover Translation Plugin</h2>
-  <p>Experience seamless translations within the Editor with the "Hover Translation" plugin. Currently optimized for Kotlin, stay tuned for future updates supporting more languages!</p>
+  <p>Experience elements translations within the Editor with the "Hover Translation" plugin. Currently optimized for Kotlin, stay tuned for future updates supporting more languages!</p>
 
   <h3>Features:</h3>
   <ul>
-      <li><b>Translation Preview</b>: Hover over any element in the Editor to instantly see both its "Original name" and "Translated name".</li>
+      <li><b>Translation Preview</b>: Hover over an element in the Editor to instantly see both its "Original name" and "Translated name".</li>
       <li><b>Addition of Translations</b>: Right-click on a selected element to reveal a context menu. Choose "Translation" > "Add Translation" to introduce your new translation.</li>
       <li><b>Import Translations</b>: Have a list of translations ready to integrate? Import them effortlessly using a CSV format (without headers). Your file should resemble:
       <pre>key1,value1</pre>
